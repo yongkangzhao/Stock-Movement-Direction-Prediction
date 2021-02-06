@@ -6,11 +6,10 @@ class Marketstack:
     def __init__(self, apikey = None):
         if apikey:
             self.apikey = apikey
-            
         else:
             try:
                 f = open("apikey", "r")
-                self.apikey = f.read()
+                self.apikey = f.read().rstrip() #rstrip removes \n
                 f.close()
             except:
                 raise Exception("apikey missing")
