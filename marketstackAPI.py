@@ -25,7 +25,7 @@ class Marketstack:
             'symbols': ticker,
             'limit': 1000,
             'offset':0,
-            'date_from ': '2012-01-01'
+            'date_from ': '2000-01-01'
         }
         if ticker:
             response = requests.get(self.url+'/eod', params)
